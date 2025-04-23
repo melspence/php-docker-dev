@@ -14,7 +14,8 @@ services:
     build:
       dockerfile: ./php/Dockerfile
     volumes:
-        - ./app:/var/ww/html
+      - /var/www/html/vendor
+      - ./app:/var/ww/html
   # mysql
   db:
     image: mysql:9.0
